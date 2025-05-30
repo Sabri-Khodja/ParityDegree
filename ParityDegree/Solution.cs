@@ -47,7 +47,7 @@
             }
 
             var powerOfTwo = PowersOfTwo[(start + end) / 2];
-            if (powerOfTwo == n) return n; 
+            if (powerOfTwo == n) return (start + end) / 2; 
 
             if (powerOfTwo > n)
             {
