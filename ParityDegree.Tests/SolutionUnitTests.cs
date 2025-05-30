@@ -4,26 +4,15 @@ namespace SolutionTests
 {
     public class SolutionUnitTests
     {
-        [Fact]
-        public void Given_NIs1_When_SolutionIsCalled_Then_Return0()
+        [Theory]
+        [InlineData(1, 0)]
+        [InlineData(24, 3)]
+        [InlineData(1000000000, 9)]
+        public void Given_N_When_SolutionIsCalled_Then_ReturnExpectedValue(int n, int expected)
         {
             var solution = new Solution();
-            int N = 1;
-            
-            int result = solution.solution(N);
-            
-            Assert.Equal(0, result);
-        }
-
-        [Fact]
-        public void Given_NIs24_When_SolutionIsCalled_Then_Return3()
-        {
-            var solution = new Solution();
-            int N = 24;
-            
-            int result = solution.solution(N);
-            
-            Assert.Equal(3, result);
+            int result = solution.solution(n);
+            Assert.Equal(expected, result);
         }
     }
 }
