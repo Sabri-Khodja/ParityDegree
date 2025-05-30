@@ -37,17 +37,17 @@
         {
             if (start == end)
             {
-                return start; //PowersOfTwo[start]; // Return the found power of two
+                return start; 
             }
 
             if (start + 1 == end)
             {
-                if (PowersOfTwo[end] <= n) return end; //PowersOfTwo[end];
-                return start; //PowersOfTwo[start];
+                if (PowersOfTwo[end] <= n) return end; 
+                return start; 
             }
 
             var powerOfTwo = PowersOfTwo[(start + end) / 2];
-            if (powerOfTwo == n) return n; //powerOfTwo;
+            if (powerOfTwo == n) return n; 
 
             if (powerOfTwo > n)
             {
